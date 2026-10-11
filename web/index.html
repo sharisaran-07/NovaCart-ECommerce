@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCart | Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1 class="logo">NovaCart<span>.</span></h1>
+
+    <input type="text" id="searchInput"
+           placeholder="Search mobiles, laptops, headphones...">
+
+    <button onclick="searchProducts()">Search</button>
+    <button onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+</header>
+
+<section class="hero">
+    <div>
+        <p class="tagline">THE NEXT-GEN SHOPPING EXPERIENCE</p>
+        <h2>Upgrade Your<br>Everyday Life.</h2>
+        <p>Discover technology, style and more in one place.</p>
+        <a href="#products" class="shopButton">Explore Products →</a>
+    </div>
+    <div class="heroVisual">🛍️</div>
+</section>
+
+<section class="categories">
+	<section class="categories">
+	    <button onclick="filterCategory('All')">All Products</button>
+	    <button onclick="filterCategory('Mobiles')">Mobiles</button>
+	    <button onclick="filterCategory('Laptops')">Laptops</button>
+	    <button onclick="filterCategory('Audio')">Audio</button>
+	    <button onclick="filterCategory('Wearables')">Wearables</button>
+	    <button onclick="filterCategory('Gaming')">Gaming</button>
+	    <button onclick="filterCategory('Cameras')">Cameras</button>
+	    <button onclick="filterCategory('Accessories')">Accessories</button>
+	    <button onclick="filterCategory('Fashion')">Fashion</button>
+	    <button onclick="filterCategory('Home')">Home</button>
+	</section>
+<main id="products">
+    <h2>Trending Products</h2>
+    <p class="subtitle">Handpicked favourites for you</p>
+    <div class="productGrid" id="productGrid"></div>
+</main>
+
+<section class="viewer" id="viewer">
+    <h2>3D Product Preview</h2>
+    <p>Select a product to explore its preview.</p>
+    <div id="productPreview">📦</div>
+    <p id="previewName">Your selected product appears here</p>
+</section>
+
+<footer>
+    <h2>NovaCart.</h2>
+    <p>Smart shopping. Simple living.</p>
+    <p>Student Project | Java + MySQL + Web Technologies</p>
+</footer>
+
+<script type="module"
+src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
